@@ -1,0 +1,72 @@
+td,
+th {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.311);
+  text-align: center;
+  padding: 10px 30px;
+  text-align: left;
+}
+th {
+  font-weight: normal;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: small;
+}
+body {
+  display: flex;
+
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.nameImg {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  border-bottom: none;
+  gap: 8px;
+  padding-left: 10px;
+}
+.name {
+  padding-left: 40px;
+}
+
+.checkbox {
+  width: 30px;
+  height: 20px;
+}
+
+.checkbox:checked {
+  accent-color: blue;
+}
+.checkboxContainer {
+  display: flex;
+
+  justify-content: center;
+}
+.Essential {
+  display: flex;
+  background-color: rgba(131, 215, 215, 0.263);
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 600;
+}
+* {
+  font-family: "Inter", sans-serif;
+}
+.mail {
+  text-decoration: underline;
+}
