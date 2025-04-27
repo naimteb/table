@@ -1,4 +1,21 @@
-/* Table Styles */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 td,
 th {
   border-bottom: 1px solid rgba(112, 112, 112, 0.311);
@@ -9,30 +26,17 @@ th {
 
 th {
   font-weight: normal;
-  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-size: small;
 }
 
-body {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  padding: 20px;
+.name {
+  padding-left: 40px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#img {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
+.mail {
+  color: #007bff;
+  text-decoration: underline;
 }
 
 .nameImg {
@@ -44,8 +48,15 @@ table {
   padding-left: 10px;
 }
 
-.name {
-  padding-left: 40px;
+#img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.checkboxContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .checkbox {
@@ -55,11 +66,6 @@ table {
 
 .checkbox:checked {
   accent-color: blue;
-}
-
-.checkboxContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .TierDisplay {
@@ -74,19 +80,8 @@ table {
   font-weight: 600;
 }
 
-* {
-  font-family: "Inter", sans-serif;
-}
-
-.mail {
-  color: #007bff;
-  text-decoration: underline;
-}
-#editbtn {
-  background-color: #a71d2a;
-}
 .btn {
-  background-color: #62e776;
+  background-color: #007bff;
   color: white;
   padding: 12px;
   border: none;
@@ -94,6 +89,18 @@ table {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+#editbtn {
+  background-color: #a71d2a;
+}
+
+#editbtn2 {
+  background-color: #1900ff;
+}
+
+#btn1 {
+  background-color: #4caf50;
 }
 
 input[type="radio"] {
@@ -114,17 +121,19 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
 }
+
 #dialog2::backdrop {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: none;
 }
+
 .btn2container {
   text-align: center;
   margin-top: 20px;
 }
 
 #btn2 {
-  background: #00ff95;
+  background: #007bff;
   background-color: #dc3545;
   color: white;
   padding: 10px 20px;
@@ -138,15 +147,18 @@ dialog::backdrop {
 #btn2:hover {
   background-color: #a71d2a;
 }
+
 #dialog1 {
   padding-top: 0%;
 }
+
 dialog {
   padding-left: 20px;
   width: 600px;
   border: none;
   border-radius: 8px;
 }
+
 dialog .txtcontainer {
   margin-bottom: 20px;
 }
@@ -159,7 +171,6 @@ dialog .txtcontainer {
 
 .newcontainer {
   display: flex;
-
   flex-wrap: wrap;
   gap: 10px;
   width: calc(95%);
@@ -169,8 +180,9 @@ dialog .txtcontainer {
 #Date {
   width: 200px;
 }
+
 .gendercontainer {
-  flex: 1 1 100%; /* grow shrink basis*/
+  flex: 1 1 100%;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -196,41 +208,28 @@ label {
   border-bottom: 2px solid #007bff;
 }
 
-.subb {
-  flex: 1 1 100%;
-  margin-top: 20px;
-}
-
 #submit {
   padding: 10px 20px;
-  background: #00eb3b;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.btn2container {
-  margin-top: 20px;
-  text-align: right;
-}
-#btn2 {
-  padding: 8px 16px;
-  background: #ccc;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .txtcontainer {
   display: flex;
   justify-content: flex-start;
 }
+
 .container2 {
   padding: 0%;
 }
+
 #diaolog1 {
   padding: 0px;
 }
+
 .bigcontainerbtn {
   padding-left: 450px;
   gap: 10px;
@@ -238,6 +237,7 @@ label {
   flex-direction: row;
   justify-content: flex-end;
 }
+
 #submit,
 #btn2 {
   width: 70px;
@@ -250,7 +250,6 @@ label {
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  font-family: "Segoe UI", sans-serif;
   background-color: #fff;
   width: 300px;
 }
@@ -292,6 +291,7 @@ label {
 #submit2:hover {
   background-color: #45a049;
 }
+
 .fieldcontainer {
   display: flex;
   flex-direction: column;

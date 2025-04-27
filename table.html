@@ -27,7 +27,8 @@
           <!-- <th>EMAILED</th> -->
           <th>Gender</th>
           <th>
-            <button class="btn" id="btn1">CREATE</button>
+            <button class="btn" id="btn1">Add User</button>
+            <button class="btn" id="editbtn2">Modify User</button>
             <button id="editbtn" class="btn">DELETE</button>
           </th>
           <th></th>
@@ -38,7 +39,7 @@
   </body>
 
   <dialog id="dialog1">
-    <div class="txtcontainer"><p class="txt">Fill in the form</p></div>
+    <div class="txtcontainer"><p class="txt">Create New User</p></div>
     <form id="form">
       <div class="newcontainer">
         <div class="fieldcontainer">
@@ -81,7 +82,7 @@
 
   <dialog id="dialog2">
     <form id="form2">
-      <label for="editinputnumber">enter the row number to delete </label>
+      <label for="editinputnumber"> idToDelete </label>
       <input type="number" id="editinputnumber" name="rownumber" />
       <input type="submit" name="" id="submit2" />
     </form>

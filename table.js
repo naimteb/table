@@ -80,18 +80,29 @@ function dataIn(e) {
   e.preventDefault();
   dialog1.close();
   const formData = new FormData(form);
+
   const formDataObject = {
     id: formData.get("id"),
-    name: formData.get("name"),
-    date: formData.get("Date"),
+    firstName: formData.get("name"),
+    birthDate: formData.get("Date"),
     email: formData.get("Email"),
     gender: formData.get("gender"),
   };
-  data.push(formDataObject);
+
+  const user = data.find(
+    (person) => Number(person.id) == Number(formDataObject.id)
+  );
+  if (user) {
+    user.firstName = formDataObject.firstName;
+    user.birthDate = formDataObject.birthDate;
+    user.email = formDataObject.email;
+    user.gender = formDataObject.gender;
+  } else {
+    data.push(formDataObject);
+  }
   displayUsersTable(data);
   updatelocalstorage();
-
-  e.preventDefault();
+  form.reset();
 }
 
 function removerow(e) {
@@ -110,4 +121,12 @@ function removeRowFromLocalStorage(idToRemove) {
     (person) => parseInt(person.id) !== idToRemove
   );
   localStorage.setItem("localData", JSON.stringify(updatedData));
+}
+
+const editbtn2 = document.getElementById("editbtn2");
+editbtn2.addEventListener("click", edit);
+function edit(e) {
+  const txt = document.getElementsByClassName("txt")[0];
+  txt.textContent = "Edit User Details";
+  dialog1.showModal();
 }
