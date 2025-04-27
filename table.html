@@ -15,121 +15,75 @@
   </head>
   <body>
     <table>
-      <tr>
-        <th class="name">Name</th>
-        <th>Current Step</th>
-        <th>Date</th>
-        <th>TIER</th>
-        <th>DEALER</th>
-        <th>Email</th>
-        <th>EMAILED</th>
-      </tr>
-      <tbody>
+      <thead>
         <tr>
-          <td>
-            <div class="nameImg">
-              <img id="img" src="Screenshot 2025-01-12 112347.jpg" alt="" />naim
-            </div>
-          </td>
-          <td class="d2">Identity and insurance</td>
-          <td>Feb 24,2024</td>
-          <td>
-            <div class="Essential">Essential</div>
-          </td>
-          <td>Autosource</td>
-          <td class="mail">tebchranynaim@gmail.com</td>
-          <td>
-            <div class="checkboxContainer">
-              <input type="checkbox" name="" class="checkbox" />
-            </div>
-          </td>
+          <th>id</th>
+          <th class="name">Name</th>
+          <!-- <th>Current Step</th> -->
+          <th>Date</th>
+          <!-- <th>TIER</th> -->
+          <!-- <th>DEALER</th> -->
+          <th>Email</th>
+          <!-- <th>EMAILED</th> -->
+          <th>Gender</th>
+          <th>
+            <button class="btn" id="btn1">CREATE</button>
+            <button id="editbtn" class="btn">DELETE</button>
+          </th>
+          <th></th>
         </tr>
-        <tr>
-          <td>
-            <div class="nameImg">
-              <img
-                id="img"
-                src="Screenshot 2025-01-12 112347.jpg"
-                alt=""
-              />sarah
-            </div>
-          </td>
-          <td class="d2">Payment verification</td>
-          <td>Mar 15, 2024</td>
-          <td><div class="Essential">Premium</div></td>
-          <td>MotorWorld</td>
-          <td class="mail">sarah.johnson@example.com</td>
-          <td>
-            <div class="checkboxContainer">
-              <input type="checkbox" name="" class="checkbox" checked />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="nameImg">
-              <img
-                id="img"
-                src="Screenshot 2025-01-12 112347.jpg"
-                alt=""
-              />michael
-            </div>
-          </td>
-          <td class="d2">Vehicle inspection</td>
-          <td>Apr 5, 2024</td>
-          <td><div class="Essential">Standard</div></td>
-          <td>CarMasters</td>
-          <td class="mail">michael.lee@example.com</td>
-          <td>
-            <div class="checkboxContainer">
-              <input type="checkbox" name="" class="checkbox" />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="nameImg">
-              <img
-                id="img"
-                src="Screenshot 2025-01-12 112347.jpg"
-                alt=""
-              />jessica
-            </div>
-          </td>
-          <td class="d2">Final approval</td>
-          <td>May 18, 2024</td>
-          <td><div class="Essential">Basic</div></td>
-          <td>AutoElite</td>
-          <td class="mail">jessica.wong@example.com</td>
-
-          <td>
-            <div class="checkboxContainer">
-              <input type="checkbox" name="" class="checkbox" checked />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="nameImg">
-              <img
-                id="img"
-                src="Screenshot 2025-01-12 112347.jpg"
-                alt=""
-              />david
-            </div>
-          </td>
-          <td class="d2">Document signing</td>
-          <td>Jun 2, 2024</td>
-          <td><div class="Essential">Gold</div></td>
-          <td>DriveTime</td>
-          <td class="mail">david.kim@example.com</td>
-          <td>
-            <div class="checkboxContainer">
-              <input type="checkbox" name="" class="checkbox" />
-            </div>
-          </td>
-        </tr>
-      </tbody>
+      </thead>
+      <tbody></tbody>
     </table>
   </body>
+
+  <dialog id="dialog1">
+    <div class="txtcontainer"><p class="txt">Fill in the form</p></div>
+    <form id="form">
+      <div class="newcontainer">
+        <div class="fieldcontainer">
+          <label for="id">id</label>
+          <input class="in" type="text" name="id" id="id" />
+        </div>
+        <div class="fieldcontainer">
+          <label for="name">Name</label>
+          <input class="in" type="text" name="name" id="name" />
+        </div>
+
+        <div class="fieldcontainer">
+          <label for="Date">Date</label>
+          <input class="in" type="date" name="Date" id="Date" />
+        </div>
+
+        <div class="fieldcontainer">
+          <label for="Email">Email</label>
+          <input class="in" type="email" name="Email" id="Email" />
+        </div>
+      </div>
+
+      <div class="gendercontainer">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male" id="male" />
+
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="female" id="female" />
+      </div>
+      <div class="bigcontainerbtn">
+        <div class="btn2container">
+          <button id="btn2">Cancel</button>
+        </div>
+        <div class="subb">
+          <input type="submit" id="submit" />
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="dialog2">
+    <form id="form2">
+      <label for="editinputnumber">enter the row number to delete </label>
+      <input type="number" id="editinputnumber" name="rownumber" />
+      <input type="submit" name="" id="submit2" />
+    </form>
+  </dialog>
 </html>
