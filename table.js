@@ -14,6 +14,8 @@ const idnumber = document.getElementById("editinputnumber");
 editbtn.addEventListener("click", openDialog2);
 form2.addEventListener("submit", removerow);
 function openDialog(e) {
+  editmode = false;
+  updateformtitle();
   dialog1.showModal();
 }
 function closeDialog(e) {
@@ -77,6 +79,8 @@ function displayUsersTable(datatodisplay) {
 }
 
 function dataIn(e) {
+  const txt = document.getElementsByClassName("txt")[0];
+
   e.preventDefault();
   dialog1.close();
   const formData = new FormData(form);
@@ -126,7 +130,17 @@ function removeRowFromLocalStorage(idToRemove) {
 const editbtn2 = document.getElementById("editbtn2");
 editbtn2.addEventListener("click", edit);
 function edit(e) {
-  const txt = document.getElementsByClassName("txt")[0];
-  txt.textContent = "Edit User Details";
+  editmode = true;
+  updateformtitle();
   dialog1.showModal();
+}
+let editmode;
+
+function updateformtitle() {
+  const txt = document.getElementsByClassName("txt")[0];
+  if (editmode === true) {
+    txt.textContent = "Edit User Details";
+  } else {
+    txt.textContent = "Create New User";
+  }
 }
